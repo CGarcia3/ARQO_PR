@@ -1,0 +1,4 @@
+Ejercicio 2 (1 puntos)  
+Se pide  realizar  un  programa  en  ensamblador  simple  que  sea  capaz  de  probar  las  instrucciones  que  
+puedan haber quedado sin probar en el programa provisto como punto de partida. ¿cuales no se prueban 
+en el programa de partida?

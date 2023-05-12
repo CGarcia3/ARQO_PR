@@ -1,0 +1,6 @@
+Ejercicio 1 (2 puntos)  
+Se  pide  completar e l   microprocesador RISC V  en  su  versión uniciclo. El diseño entregado como punto 
+de partida, no soporta el set de instrucciones descripto (add, addi, and, andi, auipc, beq, bne, j, jal, 
+li, lw, lui, sw, xor).
+
+Los cambios implementados en este ejercicio quedan plasmados en el código completo del ejercicio 3.
