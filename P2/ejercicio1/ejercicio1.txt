@@ -1,0 +1,6 @@
+Ejercicio 1
+Para la primera parte, la solución es simple, es un apartado de lógica asíncrona que se encuentra al fnal del fichero.
+
+Para el caso de forwarding interno en el banco de registros, he escogido implementarlo con el falling edge ya que esta forma me pareció mas sencilla. Si se quedase en rising edge, en el mismo rising edge se introducirian los valores en la señal de RD y A3 y no sería hasta el siguiente rising edge en el que se escribiriían esos valores en el banco de registros. Si usamos falling edge, la escritura se hace entre medias de ambos rising edge, para asi estar estos datos disponibles en el siguiente rising edge.
+
+Para el apartado del hazard de load, solo seguir la lópgica asíncrona descrita en el enunciado, además del stalling en el registro IF/ID y el seteo de A3 y RegWrite en ID/EX a 0.
