@@ -41,5 +41,9 @@ As we can observe in the following image, we have 3 cores at 3.6 GHz, with hyper
 
     ![CPU info](ejercicio2/captura_reduction.png)
 
-5. 
+5. To find the threshold I decided to plot the execution times of both the pescalar_serie and pescalar_par3 methods with varying matrix sizes and 10 iterations per size. The result is that the threshold should be around 300k: 
+
+![CPU info](ejercicio2/vector_mul_N.png)
+
+## Exercise 3
 

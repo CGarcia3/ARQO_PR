@@ -6,15 +6,20 @@
 #include <stdlib.h>
 #include "arqo4.h"
 
-int main(void)
+int main(int argc, char *argv[])
 {
 	float *A=NULL, *B=NULL;
+	int arg;
 	long long k=0;
 	struct timeval fin,ini;
 	double sum=0;
 	
-	A = generateVectorOne(M);
-	B = generateVectorOne(M);
+	if (argc == 2)
+     		arg = atoi( argv[1] );	
+        else
+        	arg = M;  
+	A = generateVectorOne(arg);
+	B = generateVectorOne(arg);
 	if ( !A || !B )
 	{
 		printf("Error when allocationg matrix\n");
@@ -26,7 +31,7 @@ int main(void)
 	gettimeofday(&ini,NULL);
 	/* Bloque de computo */
 	sum = 0;
-	for(k=0;k<M;k++)
+	for(k=0;k<arg;k++)
 	{
 		sum = sum + A[k]*B[k];
 	}

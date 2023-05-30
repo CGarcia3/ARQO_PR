@@ -7,17 +7,21 @@
 #include <stdlib.h>
 #include "arqo4.h"
 
-int main(void)
+int main(int argc, char *argv[])
 {
-	int nproc;
+	int nproc, arg;
 	float *A=NULL, *B=NULL;
 	long long k=0;
 	struct timeval fin,ini;
 	double sum=0;
      	
        
-	A = generateVectorOne(M);
-	B = generateVectorOne(M);
+	if (argc == 2)
+     		arg = atoi( argv[1] );	
+        else
+        	arg = M;  
+	A = generateVectorOne(arg);
+	B = generateVectorOne(arg);
 	if ( !A || !B )
 	{
 		printf("Error when allocationg matrix\n");
@@ -36,7 +40,7 @@ int main(void)
 	sum = 0;
 	
     #pragma omp parallel for reduction (+: sum)
-	for(k=0;k<M;k++)
+	for(k=0;k<arg;k++)
 	{
 		sum = sum + A[k]*B[k];
 	}
