@@ -26,6 +26,7 @@ for ((i = Ninicio; i <= Nfinal+1; i = i+Npaso)) do
         make > /dev/null
         val_serie=$(./pescalar_serie $i | grep "Tiempo" | awk '{print $2}')
         total_serie=$(echo "scale=6; $val_serie+$total_serie" | bc)
+        
         val_par=$(./pescalar_par3 $i | grep "Tiempo" | awk '{print $2}')
         total_parallel=$(echo "scale=6; $val_par+$total_parallel" | bc)
     }

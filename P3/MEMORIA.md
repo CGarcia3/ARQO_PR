@@ -22,7 +22,7 @@ For this exercise we follow the execution pattern showed in the pdf of slow N1, 
 
 In the next image we can observe the result of exedcuting the program 10 times and the average time each matrix size took:
 
-![Avg times plot](ejercicio1/slow_fast_time.png)
+![Avg times plot](ejercicio1/capturas/slow_fast_time.png)
 
 (Fig. 1.1)
 
@@ -30,11 +30,11 @@ The difference in execution time is caused by the way the memory stores the matr
 
 ## Exercise 2
 
-![Misses lectura](ejercicio2/cache_lectura.png)
+![Misses lectura](ejercicio2/capturas/cache_lectura.png)
 
 (Fig. 2.1)
 
-![Misses Escritura](ejercicio2/cache_escritura.png)
+![Misses Escritura](ejercicio2/capturas/cache_escritura.png)
 
 (Fig. 2.2)
 
