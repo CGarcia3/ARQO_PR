@@ -1,4 +1,4 @@
-# Pracica 3: Cache
+# Practica 3: Cache
 
 For this lab, I will be using my personal computer with a VM with Ubuntu 18.04 (lab image), 3 cores and 8 GB RAM.
 
@@ -30,14 +30,18 @@ The difference in execution time is caused by the way the memory stores the matr
 
 ## Exercise 2
 
-![Misses lectura](ejercicio2/capturas/cache_lectura.png)
+![Misses lectura](ejercicio2/capturas/cache_lectura.png)\(Fig. 2.1)
 
-(Fig. 2.1)
-
-![Misses Escritura](ejercicio2/capturas/cache_escritura.png)
-
-(Fig. 2.2)
+![Misses Escritura](ejercicio2/capturas/cache_escritura.png)\(Fig. 2.2)
 
 As we can observe in fig 2.1, the number of misses increases both with the size of the matrix and in the slow (inefficient) way. This makes sense since the matrix data is stored by rows and the slow method accesses data by columns. This causes the cache to not have the desired block more often.
 
 For the fig. 2.2, both slow and fasst methods cause the same misses, this is because both methods write to the memory similarly.
+
+## Exercise 3
+
+![Misses lectura](ejercicio3/capturas/mult_cache.png)\(Fig. 3.1)
+
+![Misses Escritura](ejercicio3/capturas/mult_time.png)\(Fig. 3.2)
+
+As expected the misses and time for the transpose multiplication are better than the normal multiplication. This is caused by the way array data is stored in the cache, which is by rows. So by using the transpose multiplication (row x row) we take more advantage of the cache causing less misses which also means better execution times.
